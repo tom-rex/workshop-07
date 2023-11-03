@@ -28,8 +28,12 @@ diamonds <- diamonds %>% rename(
 
 ```{r}
 # Do some preliminary investigations & cleaning
+diamonds %>% 
+  ggplot(mapping = aes(x = carat, y = price )) + geom_point() +geom_smooth()
+#clearly carat is proportional to price
 
-
+diamonds %>% ggplot() + geom_bar(mapping = aes(x = depth_mm, colour = "blue")) + geom_bar(mapping = aes(x = width_mm, colour = "red")) + geom_bar(mapping = aes(x = depth_mm, colour = "yellow"))
+          
 
 
 ```
